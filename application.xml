@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project>
+	<!-- NMML reference: https://gist.github.com/1763850 -->
+	
+	<!-- metadata, make sure 'package' is at least 3 segments (ie. com.mycompany.myproject) -->
+	<meta title="PangRocker" package="PangRocker" version="1.0.0" company="Phichin Entertaiment" />
+	
+	<!-- output -->
+	<app main="Main" file="PangRocker" path="bin" />
+
+	<window background="#FFFFFF" fps="60" />
+	<window width="800" height="480" unless="mobile" />
+	<window orientation="landscape" vsync="false" antialiasing="0" if="cpp" />
+
+	<!-- classpath, haxe libs -->
+	<source path="src" />
+	<haxelib name="openfl" />
+	<haxelib name="actuate" />
+
+	<!-- assets -->
+	<icon path="assets/openfl.svg" />
+	<assets path="assets/images" rename="images" />
+	<assets path="assets/fonts" rename="fonts" />
+	<assets path="assets/sounds" rename="sounds" />
+
+	<!-- game effects -->
+	<assets path="assets/sounds" rename="sounds" if="web">
+            <sound path="burbuja.mp3" id="burbuja" />
+            <sound path="guitar1.mp3" id="guitar1" />
+            <sound path="guitar2.mp3" id="guitar2" />
+            <sound path="celebrating.mp3" id="celebrating" />
+			<sound path="gameover.mp3" id="gameover" />
+			<sound path="loseLife.mp3" id="loseLife" />
+			<sound path="plane.mp3" id="plane" />
+			<sound path="intro.mp3" id="intro" />
+
+            <sound path="stage1/Divina TV Fuhrer.mp3" id="Divina TV Fuhrer" />
+			<sound path="stage1/Sabado.mp3" id="Sabado" />
+			<sound path="stage2/Wellcome to the Jungle.mp3" id="Wellcome to the Jungle" />
+			<sound path="stage2/Enter Sandman.mp3" id="Enter Sandman" />
+			<sound path="stage3/Highway to Hell.mp3" id="Highway to Hell" />
+			<sound path="stage3/Suicide Blonde.mp3" id="Suicide Blonde" />
+			<sound path="stage4/Mixed Emotions.mp3" id="Mixed Emotions" />
+			<sound path="stage4/Elevation.mp3" id="Elevation" />
+			<sound path="stage5/Her We Kum.mp3" id="Her We Kum" />
+			<sound path="stage5/Dejate Caer.mp3" id="Dejate Caer" />
+			<sound path="stage6/El Rastro.mp3" id="El Rastro" />
+			<sound path="stage6/Virus.mp3" id="Virus" />
+			<sound path="stage7/On the Run.mp3" id="On the Run" />
+    </assets>
+	
+	<!-- optimize output
+	<haxeflag name="-dce full" /> -->
+	
+</project>
